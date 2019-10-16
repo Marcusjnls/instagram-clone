@@ -33,3 +33,7 @@ class Image(models.Model):
 	@classmethod
 	def save_image(self):
 		self.save()
+
+	@classmethod
+	def delete_image(self):
+		self.delete()		
