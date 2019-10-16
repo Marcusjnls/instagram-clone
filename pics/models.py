@@ -37,3 +37,8 @@ class Image(models.Model):
 	@classmethod
 	def delete_image(self):
 		self.delete()		
+
+	@classmethod
+	def update_caption(cls,id,caption):
+		updated_caption = cls.objects.filter(pk = id).update(image_caption = caption)
+		return updated_caption
