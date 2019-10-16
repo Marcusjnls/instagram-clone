@@ -28,3 +28,8 @@ class Image(models.Model):
 	user_profile = models.ForeignKey(Profile)
 	likes = models.ManyToManyField(User,related_name = 'likes', blank = True)
 	image = models.ImageField(upload_to = 'images/', blank = True)
+
+
+	@classmethod
+	def save_image(self):
+		self.save()
