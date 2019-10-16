@@ -54,3 +54,6 @@ class Image(models.Model):
 	@property
 	def all_comments(self):
 		return self.comments.all()
+
+	def __str__(self):
+		return self.image_name
