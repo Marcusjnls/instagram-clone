@@ -42,3 +42,8 @@ class Image(models.Model):
 	def update_caption(cls,id,caption):
 		updated_caption = cls.objects.filter(pk = id).update(image_caption = caption)
 		return updated_caption
+
+	@classmethod
+	def get_image_by_id(cls,image_id):
+		image = cls.objects.get(id = image_id)
+		return image		
