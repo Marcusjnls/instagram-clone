@@ -50,3 +50,7 @@ class Image(models.Model):
 
 	def total_likes(self):
 		self.likes.count()
+
+	@property
+	def all_comments(self):
+		return self.comments.all()
