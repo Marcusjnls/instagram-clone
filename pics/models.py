@@ -46,4 +46,7 @@ class Image(models.Model):
 	@classmethod
 	def get_image_by_id(cls,image_id):
 		image = cls.objects.get(id = image_id)
-		return image		
+		return image
+
+	def total_likes(self):
+		self.likes.count()
