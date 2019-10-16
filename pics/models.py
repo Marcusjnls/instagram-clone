@@ -66,3 +66,14 @@ class Comment(models.Model):
 
 	def __str__(self):
 		return self.profile
+
+#Add the following field to User dynamically
+def get_first_name(self):
+    return self.first_name
+
+class Follow(models.Model):
+    user_from = models.ForeignKey(User,related_name='rel_from_set')
+    user_to = models.ForeignKey(User, related_name='rel_to_set')
+  
+    def __str__(self):
+        return '{} follows {}'.format(self.user_from, self.user_to)		
