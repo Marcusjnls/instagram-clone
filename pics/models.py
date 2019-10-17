@@ -29,14 +29,13 @@ class Image(models.Model):
 	likes = models.ManyToManyField(User,related_name = 'likes', blank = True)
 	image = models.ImageField(upload_to = 'images/', blank = True)
 
-
 	@classmethod
 	def save_image(self):
 		self.save()
 
 	@classmethod
 	def delete_image(self):
-		self.delete()		
+		self.delete()
 
 	@classmethod
 	def update_caption(cls,id,caption):
@@ -76,4 +75,4 @@ class Follow(models.Model):
     user_to = models.ForeignKey(User, related_name='rel_to_set')
   
     def __str__(self):
-        return '{} follows {}'.format(self.user_from, self.user_to)		
+        return '{} follows {}'.format(self.user_from, self.user_to)
