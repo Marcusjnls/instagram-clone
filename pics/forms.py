@@ -11,3 +11,10 @@ class UpdateProfile(forms.ModelForm):
 		model = Profile
 		fields = ['bio','profile_pic']
 		exclude = ['user']
+
+
+class CreateComment(forms.ModelForm):
+	class Meta:
+		model = Comment
+		fields = ['comment']
+		exclude = ['image','profile']
