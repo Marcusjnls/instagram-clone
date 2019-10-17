@@ -1,0 +1,76 @@
+{%extends 'base.html'%}
+{% block content%}
+<div class="container">
+	<div class="row">
+		{% if user.is_authenticated %}
+		{%if images%}
+		{% for image in images%}
+		<div class="col-md-4">
+			<div class="card card-default">
+				<div class="card-heading inline" style="background-color: white">
+					<div class="row">
+						<div class="col-md-4 mt-2 mb-2 text-center">
+							<a href="{%url 'profile' image.profile.id%}"><img class="img-responsive rounded-circle"
+									src="{{image.user_profile.profile_pic.url}}" alt=""
+									style="width:35px; height:35px;"></a>
+						</div>
+						<div class="col-md-8 mt-2 mb-2" style="padding-top: 11px;">
+							<a href="{%url 'profile' image.profile.id%}">{{image.profile.username}}</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="card-title">
+					<div class="hovereffect" style="height: 245px; ">
+						<a href="{% url 'single' image.id %}">
+							<img class="img-responsive" src="{{image.image.url}}" alt="" style="height: 250PX;">
+						</a>
+					</div>
+
+				</div>
+				<div class="card-body">
+					<p></p>
+					<a href="{% url 'likePost' image.id %}">
+						{%if is_liked%}
+						<i class="fas fa-heart text-danger" style="font-size:25px;padding-left: 10px"></i>
+						{%else%}
+						<i class="far fa-heart text-danger" style="font-size:25px;padding-left: 10px"></i>
+						{%endif%}
+					</a>
+					<span style="font-size:25px;">{{image.likes.count}}</span>
+
+					<a class='info' href="{% url 'single' image.id %}">
+						{%if is_liked%}
+						<i class="fas fa-comment" style="font-size:25px;padding-left: 10px"></i>
+						{%else%}
+						<i class="far fa-comment" style="font-size:25px;padding-left: 10px"></i>
+						{%endif%}
+
+					</a>
+
+					<span style="font-size:25px;">{{image.comments.count}}</span>
+					</p>
+					</p>
+					<p><strong>{{image.profile.username}}</strong>: {{image.image_caption}}</p>
+
+
+				</div>
+
+			</div>
+			<br>
+
+
+
+		</div>
+		{%endfor%}
+		{%else%}
+		<h5 class="text-center">Oops! You havent posted any images yet. Get started by posting one <a
+				href="{% url 'create' %}">here</a></h5>
+		{%endif%}
+		{%else%}
+		<h5 class="text-center">Log in to view more images</h5>
+		{%endif%}
+	</div>
+</div>
+
+{%endblock%}
