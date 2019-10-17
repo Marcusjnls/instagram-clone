@@ -4,21 +4,7 @@ This is an attempt at cloning the social media site instagram where users share 
 
 ## Author
 
-* **Marcus Jean-Louis** - *Initial work* - [Marcusjnls](https://github.com/Marcusjnls)
-
-# Application Screenshots
-
-[User Profile](screenshots/profile.png)
-
-[Homepage](screenshots/home.png)
-
-[Comments](screenshots/comment.png)
-
-[Create Post](screenshots/create_post.png)
-
-[Search Results](screenshots/search.png)
-
-[Edit Post](screenshots/edit_post.png)
+* **Marcus Jean-Louis**  [Marcusjnls](https://github.com/Marcusjnls)
 
 ## Getting Started
 
