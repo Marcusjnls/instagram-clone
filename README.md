@@ -1,4 +1,4 @@
-# ![Insta_Gram](https://markozy-insta.herokuapp.com/)
+# [Insta_Gram](https://markozy-insta.herokuapp.com/)
 
 This is an attempt at cloning the social media site instagram where users share comment and like photos
 
@@ -8,17 +8,17 @@ This is an attempt at cloning the social media site instagram where users share 
 
 # Application Screenshots
 
-![User Profile](screenshots/profile.png)
+[User Profile](screenshots/profile.png)
 
-![Homepage](screenshots/home.png)
+[Homepage](screenshots/home.png)
 
-![Comments](screenshots/comment.png)
+[Comments](screenshots/comment.png)
 
-![Create Post](screenshots/create_post.png)
+[Create Post](screenshots/create_post.png)
 
-![Search Results](screenshots/search.png)
+[Search Results](screenshots/search.png)
 
-![Edit Post](screenshots/edit_post.png)
+[Edit Post](screenshots/edit_post.png)
 
 ## Getting Started
 
